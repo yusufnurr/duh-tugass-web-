@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>Halaman Register</title>
+{% endblock %}
+
+{% block body %}
+<div class="mt-5"></div>
+<div class="row justify-content-center">
+    <div class="col-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>Form Registrasi</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input name="inpUser" type="text" class="form-control" placeholder="Masukkan username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input name="inpEmail" type="email" class="form-control" placeholder="Masukkan email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input name="inpPass" type="password" class="form-control" placeholder="Masukkan password" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success mt-3">Daftar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <p class="mb-0">Sudah punya akun? 
+                    <a href="{{ url_for('login') }}">Login di sini</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
